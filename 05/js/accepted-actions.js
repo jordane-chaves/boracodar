@@ -46,8 +46,21 @@ function handleResult(state) {
 }
 
 function handlePercentage(state) {
-  const decimalValue = state.currentValue / 100;
-  state.currentValue = `${decimalValue}`;
+  const lastNumberAndSignal = /(?<lastNumber>\d+)[\+\-]$/m;
+  const expressionEndsWithSumOrSubtract = state.expression
+    .match(lastNumberAndSignal);
+
+  const decimalCurrentValue = parseFloat(state.currentValue) / 100;
+  let percentage = decimalCurrentValue;
+
+  if (expressionEndsWithSumOrSubtract) {
+    const { lastNumber } = expressionEndsWithSumOrSubtract.groups;
+    percentage = (decimalCurrentValue * lastNumber);
+  }
+
+  const percentageSanitized = parseFloat(percentage.toFixed(2));
+
+  state.currentValue = `${percentageSanitized}`;
 }
 
 function handleNegate(state) {
