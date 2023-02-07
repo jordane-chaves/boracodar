@@ -1,0 +1,36 @@
+#screen {
+  color: var(--color-gray-500);
+  padding: 0 1.375rem;
+}
+
+#screen .expression {
+  font-size: 1.25rem;
+  line-height: 140%;
+
+  text-align: right;
+
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+#screen .expression::-webkit-scrollbar {
+  display: none;
+}
+
+#screen .result {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+
+  font-size: 1.25rem;
+  overflow: hidden;
+
+  margin-top: 0.5rem;
+}
+
+#screen .result span {
+  color: var(--color-gray-200);
+  font-size: 2.25rem;
+  line-height: 140%;
+}

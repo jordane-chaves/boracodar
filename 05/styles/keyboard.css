@@ -1,0 +1,67 @@
+#keyboard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+
+  margin-top: 1.625rem;
+}
+
+#keyboard button {
+  border: none;
+  border-radius: 50%;
+  background: var(--gradient-button-effect), var(--color-purple-900);
+
+  color: var(--color-gray-200);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.5rem;
+
+  height: 4rem;
+  width: 4rem;
+
+  outline: none;
+
+  box-shadow: 0px 11px 7px rgba(0, 0, 0, 0.01),
+    0px 7px 7px rgba(0, 0, 0, 0.04),
+    0px 4px 6px rgba(0, 0, 0, 0.1),
+    0px 2px 4px rgba(0, 0, 0, 0.26),
+    0px 0px 2px rgba(0, 0, 0, 0.29),
+    inset 0px 2px 3px rgba(255, 255, 255, 0.06);
+}
+
+#keyboard button:nth-child(4n) {
+  background: var(--gradient-button-effect), var(--color-purple-800);
+}
+
+#keyboard button:first-child {
+  color: var(--color-purple-500);
+}
+
+#keyboard button:last-child {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%),
+    var(--color-purple-600);
+
+  box-shadow: 0px 11px 7px rgba(0, 0, 0, 0.01),
+    0px 7px 7px rgba(0, 0, 0, 0.04),
+    0px 4px 6px rgba(0, 0, 0, 0.1),
+    0px 2px 4px rgba(0, 0, 0, 0.26),
+    0px 0px 2px rgba(0, 0, 0, 0.29),
+    inset 0px 2px 3px rgba(255, 255, 255, 0.1);
+}
+
+#keyboard button:hover {
+  cursor: pointer;
+  filter: brightness(1.25);
+}
+
+#keyboard button:focus {
+  outline: 2px solid var(--color-purple-500);
+}
+
+#keyboard button:active {
+  filter: brightness(0.9);
+  transform: scale(0.98);
+}

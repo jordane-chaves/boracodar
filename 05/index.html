@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://unpkg.com/phosphor-icons"></script>
+
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/screen.css">
+  <link rel="stylesheet" href="styles/keyboard.css">
+
+  <title>Calculadora</title>
+</head>
+<body>
+  <div id="calculator">
+    <div id="screen">
+      <div class="expression"></div>
+      <div class="result">
+        <i class="ph-equals"></i>
+        <span>0</span>
+      </div>
+    </div>
+
+    <div id="keyboard">
+      <button id="cancelEntry">CE</button>
+      <button id="clear">C</button>
+      <button id="%">%</button>
+      <button id="/"><i class="ph-divide"></i></button>
+      <button id="7">7</button>
+      <button id="8">8</button>
+      <button id="9">9</button>
+      <button id="*"><i class="ph-x"></i></button>
+      <button id="4">4</button>
+      <button id="5">5</button>
+      <button id="6">6</button>
+      <button id="-"><i class="ph-minus"></i></button>
+      <button id="1">1</button>
+      <button id="2">2</button>
+      <button id="3">3</button>
+      <button id="+"><i class="ph-plus"></i></button>
+      <button id="negate"><i class="ph-plus-minus"></i></button>
+      <button id="0">0</button>
+      <button id=",">,</button>
+      <button id="="><i class="ph-equals"></i></button>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

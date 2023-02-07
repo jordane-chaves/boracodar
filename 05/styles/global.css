@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --color-purple-500: #975dfa;
+  --color-purple-600: #7f45e2;
+  --color-purple-800: #462878;
+  --color-purple-900: #2d2a37;
+  --color-gray-200: #ebebeb;
+  --color-gray-500: #6b6b6b;
+
+  --gradient-button-effect: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%);
+}
+
+body {
+  background:
+    linear-gradient(180deg, #807ECE 0%,#8E7ECE 100%)
+    no-repeat;
+
+  color: var(--color-gray-200);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+  width: 100vw;
+  min-height: 38rem;
+  min-width: 25rem;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body * {
+  font-family: 'Rubik', sans-serif;
+  letter-spacing: -0.02rem;
+}
+
+#calculator {
+  background: var(--color-purple-900);
+  border-radius: 3rem;
+
+  /* height: 35.375rem;  566px */
+  width: 22.25rem; /* 356px */
+
+  padding: 3.375rem 2rem 2rem 2rem;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+    0px 188px 52px rgba(0, 0, 0, 0.01),
+    0px 120px 48px rgba(0, 0, 0, 0.04),
+    0px 68px 41px rgba(0, 0, 0, 0.15),
+    0px 30px 30px rgba(0, 0, 0, 0.26),
+    0px 8px 17px rgba(0, 0, 0, 0.29),
+    inset 0px 6px 8px rgba(255, 255, 255, 0.1),
+    inset 0px -4px 5px rgba(0, 0, 0, 0.22);
+}
