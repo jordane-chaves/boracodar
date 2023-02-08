@@ -14,13 +14,13 @@
   --color-gray-200: #ebebeb;
   --color-gray-500: #6b6b6b;
 
-  --gradient-button-effect: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%);
+  --gradient-button-effect:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%,
+      rgba(255, 255, 255, 0.05) 100%);
 }
 
 body {
-  background:
-    linear-gradient(180deg, #807ECE 0%,#8E7ECE 100%)
-    no-repeat;
+  background: linear-gradient(180deg, #807ECE 0%,#8E7ECE 100%);
 
   color: var(--color-gray-200);
 
@@ -30,8 +30,6 @@ body {
 
   height: 100vh;
   width: 100vw;
-  min-height: 38rem;
-  min-width: 25rem;
 }
 
 body::-webkit-scrollbar {
@@ -46,9 +44,6 @@ body * {
 #calculator {
   background: var(--color-purple-900);
   border-radius: 3rem;
-
-  /* height: 35.375rem;  566px */
-  width: 22.25rem; /* 356px */
 
   padding: 3.375rem 2rem 2rem 2rem;
 
