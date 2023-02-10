@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: linear-gradient(167.96deg, #8257E5 0%, #271A45 100%);
+  color: white;
+
+  display: grid;
+  place-items: center;
+
+  height: 100vh;
+  width: 100vw;
+}
+
+body * {
+  font-family: 'Rubik', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+#boarding-pass {
+  display: grid;
+  place-items: center;
+  gap: 1.25rem;
+}
+
+#boarding-pass > footer {
+  font-size: 14px;
+  line-height: 1.5rem;
+  opacity: 0.64;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+strong {
+  font-weight: 500;
+}
+
+.right {
+  text-align: right;
+}
+
+.ticket {
+  filter: drop-shadow(0px 0.125rem 1.5rem rgba(0, 0, 0, 0.25));
+}
+
+.ticket > div {
+  background: white;
+  border-radius: 1.5rem;
+  color: rgba(0 0 0 / 0.88);
+
+  display: grid;
+  gap: 1.5rem;
+
+  min-width: 20.4375rem; /*  327px */
+
+  padding: 1.5rem 2rem;
+  position: relative;
+}
+
+.ticket > div > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ticket > div + div::before {
+  content: '';
+
+  border: 1px dashed rgba(0 0 0 / 0.32);
+
+  position: absolute;
+  top: -0.5px;
+
+  height: 0px;
+  width: 279px;
+
+  margin: 0 1.5rem;
+}
+
+.ticket > div span {
+  color: rgba(0 0 0 / 0.64);
+  font-size: 0.875rem;
+}
+
+/* flight-info */
+
+.flight-info img {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.airport {
+  font-size: 2.5rem;
+}
+
+div.flight-time {
+  display: flex;
+}
+
+div.flight-time.right {
+  justify-content: flex-end;
+}
+
+div.flight-time span {
+  color: rgba(0 0 0 / 0.80);
+  font-size: 10px;
+  font-weight: 500;
+}
+
+/* boarding-info */
+
+.boarding-info > div > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.boarding-info > div > div:nth-child(1) {
+  gap: 1rem;
+}
+
+.qr-code {
+  align-items: center;
+}
+
+.boarding-time {
+  background-color: #633BBC;
+  border-radius: 0.5rem;
+
+  width: fit-content;
+
+  margin-top: 0.125rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.boarding-time p {
+  color: white;
+  font-weight: 500;
+}
+
+.boarding-info .attention p {
+  color: rgba(0 0 0 / 0.80);
+
+  line-height: 1.25rem;
+  text-align: center;
+  width: 100%;
+}
+
+/* animation */
+
+#airplane-icon {
+  transition: transform 1s ease-in;
+  transform-origin: top center;
+}
+
+#airplane-icon:hover {
+  animation: fly 1s ease-in;
+}
+
+@keyframes fly {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}
