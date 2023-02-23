@@ -1,0 +1,306 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --red-500: #e45858;
+  --gray-1: #fffffe;
+  --gray-25: #f8f8ff;
+  --gray-50: #f4f4ff;
+  --gray-100: #eaeaea;
+  --gray-200: #858793;
+  --gray-300: #7c7c8a;
+  --gray-900: #121214;
+  --purple-500: #6246ea;
+  --purple-600: #583ed6;
+}
+
+.sr-only {
+  position: absolute;
+  width: 0.1rem;
+  height: 0.1rem;
+  padding: 0;
+  margin: -0.1rem;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.btn {
+  border-radius: 0.5rem;
+  background: var(--purple-500);
+  color: white;
+
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.4rem 2.4rem;
+
+  cursor: pointer;
+  transition: background 200ms;
+}
+
+.btn:hover {
+  background-color: var(--purple-600);
+  color: white;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+body * {
+  color: var(--gray-900);
+  font-family: 'Roboto', sans-serif;
+}
+
+input,
+select,
+button {
+  all: unset;
+}
+
+i {
+  color: var(--red-500);
+  font-size: 2.4rem;
+}
+
+header {
+  background:
+    url(./assets/illustration-01.svg) no-repeat top left,
+    url(./assets/illustration-02.svg) no-repeat bottom right,
+    var(--gray-25);
+
+  display: grid;
+  place-content: center;
+
+  min-height: 53.2rem;
+}
+
+header .content {
+  padding: 10rem 0;
+}
+
+header .top {
+  text-align: center;
+}
+
+header p {
+  color: var(--red-500);
+
+  font-weight: 500;
+  line-height: 160%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+header h1 {
+  font-size: 4.8rem;
+  line-height: 125%;
+
+  margin: 1.8rem auto 0;
+  max-width: 64.7rem;
+}
+
+header h1 span {
+  color: var(--purple-500);
+}
+
+form {
+  background: white;
+  border: 0.1rem solid var(--gray-100);
+  border-radius: 1rem;
+
+  display: flex;
+  gap: 2.4rem;
+
+  margin-top: 4rem;
+  padding: 4rem;
+}
+
+form button[type=submit] {
+  padding: 1.2rem 3.2rem;
+}
+
+input,
+select {
+  min-width: 29rem;
+}
+
+main {
+  padding-inline: 4rem;
+}
+
+main > .content {
+  max-width: 121.6rem;
+  margin: 10rem auto;
+}
+
+section.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input[type=radio] {
+  display: none;
+}
+
+.search-field {
+  color: var(--gray-300);
+  background: var(--gray-50);
+  border-radius: 0.5rem;
+
+  display: flex;
+  align-items: center;
+  padding: 1.2rem 0.8rem 1.2rem 1.4rem;
+  gap: 1.2rem;
+
+  position: relative;
+  z-index: 0;
+}
+
+.search-field:has(input:focus),
+.search-field:has(select:focus) {
+  box-shadow: 0.3rem 0 0 var(--purple-500);
+}
+
+.search-field select + i {
+  color: var(--gray-200);
+
+  position: absolute;
+  right: 1rem;
+  z-index: -1;
+}
+
+.view {
+  border: 1px solid var(--gray-100);
+  border-radius: 0.6rem;
+
+  display: flex;
+
+  padding: 0.8rem;
+}
+
+.view input:not(:checked) + label {
+  background-color: transparent;
+  color: var(--purple-500);
+}
+
+.view input:not(:checked) + label:hover {
+  background-color: var(--gray-100);
+}
+
+.cards {
+  margin-top: 4rem;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3.2rem;
+}
+
+.card {
+  background: white;
+  border: 0.1rem solid var(--gray-100);
+  border-radius: 1rem;
+
+  overflow: hidden;
+
+  max-width: 38.4rem;
+  cursor: pointer;
+}
+
+.card:hover img {
+  scale: 1.2;
+  transition: scale 300ms;
+}
+
+.card .cover,
+.card .cover::after,
+.card img {
+  object-fit: cover;
+  height: 15.3rem;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: scale 300ms;
+}
+
+.card .cover::after {
+  content: '';
+  background: rgba(98, 70, 234, 0.2);
+  position: absolute;
+  left: 0;
+}
+
+.card .content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+
+  padding: 1.6rem;
+}
+
+.card h3 {
+  font-size: 2rem;
+  line-height: 140%;
+}
+
+.card p {
+  color: rgba(0, 0, 0, 0.75);
+  line-height: 160%;
+}
+
+.card .location {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    font-size: 50%;
+  }
+
+  header {
+    background-size: 30vw;
+  }
+}
+
+@media (max-width: 870px) {
+  header .content {
+    padding: 4rem;
+  }
+
+  header form {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 660px) {
+  section.cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  section.cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+}
