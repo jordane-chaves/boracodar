@@ -21,14 +21,16 @@ function onLoad() {
 function onSubmit(event) {
   event.preventDefault();
 
-  const cityId = document.getElementById('city').value;
+  const citySelect = document.getElementById('city');
+  const cityId = citySelect.value;
 
-  if (!cityId) {
-    return;
-  }
+  const blocksFiltered = cityId
+    ? blocks.filter(block => block.location.id === cityId)
+    : blocks;
 
-  const blocksFiltered = blocks.filter(block => block.location.id === cityId);
   renderCards(blocksFiltered);
+
+  citySelect.value = '';
 }
 
 window.addEventListener('load', onLoad);
