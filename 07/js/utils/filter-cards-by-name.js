@@ -1,6 +1,6 @@
 /**
  * @param {HTMLInputElement} searchField
- * @param {HTMLDivElement[]} cards
+ * @param {HTMLElement[]} cards
  */
 export function filterCardsByName(searchField, cards) {
   searchField.addEventListener('input', (event) => {

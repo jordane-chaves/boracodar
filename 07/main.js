@@ -2,6 +2,7 @@ import { blocks } from './js/utils/blocks.js';
 import { renderCards } from './js/utils/render-cards.js';
 import { fillSelect } from './js/utils/fill-select.js';
 import { filterCardsByName } from './js/utils/filter-cards-by-name.js';
+import { filterCardsByLocation } from './js/utils/filter-cards-by-location.js';
 
 const formElement = document.getElementById('search');
 
@@ -21,16 +22,13 @@ function onLoad() {
 function onSubmit(event) {
   event.preventDefault();
 
-  const citySelect = document.getElementById('city');
-  const cityId = citySelect.value;
+  const locationSelect = document.getElementById('city');
+  const selectedLocationId = locationSelect.value;
+  const cards = document.querySelectorAll('.cards .card');
 
-  const blocksFiltered = cityId
-    ? blocks.filter(block => block.location.id === cityId)
-    : blocks;
+  filterCardsByLocation(cards, selectedLocationId);
 
-  renderCards(blocksFiltered);
-
-  citySelect.value = '';
+  locationSelect.value = '';
 }
 
 window.addEventListener('load', onLoad);
