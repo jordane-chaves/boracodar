@@ -6,6 +6,8 @@
  * @property {Object} location
  * @property {string} location.id
  * @property {string} location.name
+ * @property {number} location.latitude
+ * @property {number} location.longitude
  */
 
 export const blocks = [
@@ -16,6 +18,8 @@ export const blocks = [
     location: {
       id: 'sao-paulo',
       name: 'São Paulo - SP',
+      latitude: -23.6807245,
+      longitude: -47.0106217,
     },
   },
   {
@@ -25,6 +29,8 @@ export const blocks = [
     location: {
       id: 'florianopolis',
       name: 'Florianópolis - SC',
+      latitude: -27.5707056,
+      longitude: -48.7504614,
     },
   },
   {
@@ -34,6 +40,8 @@ export const blocks = [
     location: {
       id: 'curitiba',
       name: 'Curitiba - PR',
+      latitude: -25.4947402,
+      longitude: -49.4298817,
     },
   },
   {
@@ -43,6 +51,8 @@ export const blocks = [
     location: {
       id: 'salvador',
       name: 'Salvador - BA',
+      latitude: -12.9015883,
+      longitude: -38.4901454,
     },
   },
   {
@@ -52,6 +62,8 @@ export const blocks = [
     location: {
       id: 'sao-paulo',
       name: 'São Paulo - SP',
+      latitude: -23.6907245,
+      longitude: -47.0016217,
     },
   },
   {
@@ -61,6 +73,8 @@ export const blocks = [
     location: {
       id: 'sao-paulo',
       name: 'São Paulo - SP',
+      latitude: -23.6807245,
+      longitude: -47.0036217,
     },
   },
   {
@@ -70,6 +84,8 @@ export const blocks = [
     location: {
       id: 'rio-de-janeiro',
       name: 'Rio de Janeiro - RJ',
+      latitude: -22.0597028,
+      longitude: -44.044793,
     },
   },
   {
@@ -79,6 +95,8 @@ export const blocks = [
     location: {
       id: 'porto-alegre',
       name: 'Porto Alegre - RS',
+      latitude: -30.1084987,
+      longitude: -51.3172251,
     },
   },
   {
@@ -88,6 +106,8 @@ export const blocks = [
     location: {
       id: 'sao-paulo',
       name: 'São Paulo - SP',
+      latitude: -23.5807245,
+      longitude: -47.0026217,
     },
   },
 ];

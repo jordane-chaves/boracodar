@@ -158,6 +158,29 @@ input[type=radio] {
   display: none;
 }
 
+main:has(#list:checked) #map {
+  display: none;
+}
+
+main:has(#map-radio:checked) #cards {
+  display: none;
+}
+
+#cards {
+  margin-top: 4rem;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3.2rem;
+}
+
+#map {
+  height: 65rem;
+  width: 100%;
+
+  margin-top: 4rem;
+}
+
 .search-field {
   color: var(--gray-300);
   background: var(--gray-50);
@@ -201,14 +224,6 @@ input[type=radio] {
 
 .view input:not(:checked) + label:hover {
   background-color: var(--gray-100);
-}
-
-.cards {
-  margin-top: 4rem;
-
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3.2rem;
 }
 
 .card {
@@ -290,13 +305,13 @@ input[type=radio] {
 }
 
 @media (max-width: 660px) {
-  section.cards {
+  section#cards {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 500px) {
-  section.cards {
+  section#cards {
     grid-template-columns: 1fr;
   }
 

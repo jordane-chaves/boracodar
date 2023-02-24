@@ -5,7 +5,7 @@ import { card } from '../components/card.js';
  * @param {Block[]} blocks
  */
 export function renderCards(blocks) {
-  const cardsElement = document.querySelector('.cards');
+  const cardsElement = document.querySelector('#cards');
 
   if (!cardsElement) {
     return;
